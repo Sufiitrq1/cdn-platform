@@ -1,0 +1,1 @@
+(function () { "use strict"; function initApp() { console.log("Enterprise CDN asset loaded successfully"); document.addEventListener("DOMContentLoaded", function () { var timestamp = new Date().toISOString(); console.log("Assets served via CloudFront CDN at " + timestamp); }); } initApp(); })();

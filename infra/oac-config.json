@@ -1,0 +1,7 @@
+{
+  "Name": "enterprise-assets-oac",
+  "Description": "OAC for enterprise static assets S3 bucket",
+  "SigningProtocol": "sigv4",
+  "SigningBehavior": "always",
+  "OriginAccessControlOriginType": "s3"
+}

@@ -1,0 +1,45 @@
+{
+  "CallerReference": "enterprise-cdn-dist-001",
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "S3-enterprise-assets",
+        "DomainName": "enterprise-assets.s3.amazonaws.com",
+        "OriginPath": "",
+        "CustomHeaders": {
+          "Quantity": 0
+        },
+        "S3OriginConfig": {
+          "OriginAccessIdentity": ""
+        },
+        "OriginAccessControlId": "94187470-529d-4e98-a69d-7f4302d7e696"
+      }
+    ]
+  },
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "S3-enterprise-assets",
+    "ViewerProtocolPolicy": "redirect-to-https",
+    "AllowedMethods": {
+      "Quantity": 2,
+      "Items": ["GET", "HEAD"],
+      "CachedMethods": {
+        "Quantity": 2,
+        "Items": ["GET", "HEAD"]
+      }
+    },
+    "Compress": true,
+    "DefaultTTL": 86400,
+    "MinTTL": 0,
+    "MaxTTL": 31536000,
+    "ForwardedValues": {
+      "QueryString": false,
+      "Cookies": {
+        "Forward": "none"
+      }
+    }
+  },
+  "Comment": "Enterprise static asset CDN distribution",
+  "Enabled": true,
+  "WebACLId": "arn:aws:wafv2:us-east-1:000000000000:global/webacl/enterprise-cdn-waf/6520835f-1f7f-480e-8d62-0fc0722cac23"
+}

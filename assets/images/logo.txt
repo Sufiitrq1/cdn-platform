@@ -1,0 +1,3 @@
+This is a placeholder file simulating a PNG image.
+In production, this would be an actual image binary.
+Served via CloudFront with image/png content-type.
